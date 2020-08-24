@@ -1,4 +1,6 @@
-int i=1,n=1;
+public class Main {
+    public static void main(String[] args) {
+        int i=1,n=1;
         while(i<=10)
         {
             System.out.print(i+" ");
@@ -10,3 +12,8 @@ int i=1,n=1;
             i++;
             n=1;
             System.out.println("");
+
+        }
+
+    }
+}
