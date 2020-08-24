@@ -1,6 +1,11 @@
-int a,b;
-a=21;
-b=30;
-String name = "мой возраст";
+public class Main {
 
-    System.out.println(a+b);
+    public static void main(String[] args) {
+        int a,b;
+        a=21;
+        b=30;
+        String name = "мой возраст";
+
+        System.out.println(a+b);
+    }
+}
