@@ -7,7 +7,6 @@ public static int min(int a, int b, int c) {
         else
             m = c;
         return m;
-        //напишите тут ваш код
     }
 
     public static void main(String[] args) throws Exception {
@@ -15,3 +14,5 @@ public static int min(int a, int b, int c) {
         System.out.println(min(-1, -2, -3));
         System.out.println(min(3, 5, 3));
         System.out.println(min(5, 5, 10));
+    }
+}
