@@ -1,15 +1,19 @@
-public class Main {
-    public static void main(String[] args)
-    {
-        String a = "Мама";
-        String b= "Мыла";
-        String c= "Раму";
+// такой тоже имеет место быть ))
 
-        System.out.println(a+b+c);
-        System.out.println(a+c+b);
-        System.out.println(b+a+c);
-        System.out.println(b+c+a);
-        System.out.println(c+a+b);
-        System.out.println(c+b+a);
+public static void main(String[] args) {
+        String cleaning[] = new String[3];
+        cleaning[0] = "Мама";
+        cleaning[1] = "Мыла";
+        cleaning[2] = "Раму";
+
+        for (int i = 0; i < cleaning.length; i++) {
+            for (int a = 0; a < cleaning.length; a++) {
+                for (int b = 0; b < cleaning.length; b++) {
+                    if(i!=a & i!=b & a!=b)
+                        System.out.println(cleaning[i]+cleaning[a]+cleaning[b]);
+                }
+            }
+        }
     }
+
 }
