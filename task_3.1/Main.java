@@ -1,45 +1,46 @@
-public static void main(String[] args) {
-        Family gosha = new Family();
-        gosha.name = "Гоша";
-        Family mom=new Family();
-        mom.name="Тамара";
-        Family daddy = new Family();
-        daddy.name = "Николай";
-        Family grandmother = new Family();
-        grandmother.name = "Вера " + "и "+ " Надежда";
-        Family granddad = new Family();
-        granddad.name = "Сергей " + "и " + " Василий";
-        //Family granddad2 = new Family();
-        //granddad2.name = "Василий";
-        gosha.getInfo();
-        mom.getInfoMom();
-        daddy.getInfoDaddy();
-        grandmother.getInfoBa();
-        granddad.getInfiDad();
+ public static void main(String[] args) {
+            Person valera=new Person("Валера","Иванов",69,null,null);
+            Person olga = new Person("Ольга","Иванова",67,null,null);
+            Person oleg = new Person("Олег","Петров",65,null,null);
+            Person jula = new Person("Юля","Петрова",67,null,null);
+            Person alex = new Person("Алексей","Иванов",37,olga,valera);
+            Person eva  = new Person("Ева","Иванова",37,jula,oleg);
+            Person gosha= new Person("Гоша","Иванов",10,eva,alex);
+            System.out.println("Меня зовут: "+gosha.getName());
+            System.out.println("Имя моей мамы:" + eva.getName());
+            System.out.println("Имя моего папы:" +alex.getName());
+            System.out.println("У меня две бабушки, бабушка  "+gosha.getMother().getMother().getName() + " и " +olga.name);
+            System.out.println("У меня два деда, деда "+oleg.getName() + " и " +valera.getName());
 
+        }
+    }
 
+    class Person{
+         String name;
+         String lastname;
+         int age;
+         int hp = 100;
+         Person mother;
+         Person father;
+        public Person(String name, String lastname, int age, Person mother, Person father){
+            this.name = name;
+            this.lastname = lastname;
+            this.age = age;
+            this.mother = mother;
+            this.father = father;
+        }
+        public String getName() {
+            return this.name;
+        }
+        public int getHp(){
+            return this.hp;
+        }
+        public Person getMother(){
+            return this.mother;
+        }
+        public void setHp(int hp){
+            if (this.hp+hp>100) this.hp = 100;
+            else this.hp = this.hp + hp;
+        }
     }
-}
-class Family{
-    String name;
-    String lastname;
-    int age;
-    void sayHi(){
-        System.out.println("Привет");
-    }
-    void getInfo(){
-        System.out.println("Меня звать" +" "+ name);
-    }
-    void getInfoMom(){
-        System.out.println("Имя моей мамы" + " "+ name);
-    }
-    void getInfoDaddy(){
-        System.out.println("Имя моего папы" + " " + name);
-    }
-    void getInfoBa(){
-        System.out.println("У меня две бабушки, " + "бабушка "  + name );
-    }
-    void getInfiDad(){
-        System.out.println("У меня два деда, " + "деда " + name);
-    }
-}
+
