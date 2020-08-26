@@ -1,4 +1,5 @@
-public static int min(int a, int b, int c, int d) {
+public class Main {
+    public static int min(int a, int b, int c, int d) {
         int e;
         if (a<b && a<c && a<d){
             return e=a;
@@ -19,7 +20,7 @@ public static int min(int a, int b, int c, int d) {
 
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         System.out.println(min(-20, -10));
         System.out.println(min(-40, -10, -30, 40));
         System.out.println(min(-20, -40, -30, 40));
