@@ -1,4 +1,5 @@
-public static int min(int a, int b, int c) {
+public class Main {
+    public static int min(int a, int b, int c) {
         int m;
         if (a <= b & a <= c)
             m = a;
