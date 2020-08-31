@@ -62,7 +62,7 @@ class Horse extends Animal{
         System.out.println("Игого я побежал(а)");
     }
 }
-class Pegasus extends Animal{
+class Pegasus extends Horse{
     public Pegasus(String nickname, int age, String breed) {
         super(nickname, age, breed);
     }
