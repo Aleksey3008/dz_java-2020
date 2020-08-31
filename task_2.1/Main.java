@@ -1,16 +1,17 @@
 public class Main {
     public static int min(int a, int b, int c) {
-        int m;
-        if (a <= b & a <= c)
+        int m=0;
+        if (a <= b && a <= c)
             m = a;
-        if (b <= a & b <= c)
+        else if (b <= c && b <= a)
             m = b;
-        else
+        else if (c <= b && c <= a)
             m = c;
         return m;
+
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println(min(1, 2, 3));
         System.out.println(min(-1, -2, -3));
         System.out.println(min(3, 5, 3));
